@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Custom styles for the dialog */
+      dialog {
+        width: 300px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #q;
+      }
+
+      button:focus {
+        outline: none;
+      }
+
+      /* Rest of your styles... */
+
+      .escondido {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">AVIATOR MEGA BET</a>
+          <ul id="opcoes" class="escondido">
+            <li><a href="#">Estratégia Conservadora:</a></li>
+            <li><a href="#">Estratégia do Martingale:</a></li>
+            <li><a href="#">Estratégia do Parachute:</a></li>
+            <li><a href="#">Estratégia do Favorito:</a></li>
+            <li><a href="#">Estratégia do Risco/Recompensa:</a></li>
+            <li><a href="#">Estratégia do Grupo:</a></li>
+            <li><a href="#">Estratégia do Tempo:</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div id="icone-menu">&#9776;</div>
+    </nav>
+
+    <!-- Custom Dialog -->
+    <dialog id="custom-dialog">
+      <h1>Option Name</h1>
+      <button id="dialog-close-button">Close</button>
+    </dialog>
+
+    <script>
+      const iconeMenu = document.getElementById('icone-menu');
+      const opcoes = document.getElementById('opcoes');
+      const customDialog = document.getElementById('custom-dialog');
+      const dialogCloseButton = document.getElementById('dialog-close-button');
+
+      iconeMenu.addEventListener('click', function () {
+        opcoes.classList.toggle('escondido');
+      });
+
+      // Function to show the dialog with the option name
+      function showDialog(optionName) {
+        const dialogTitle = customDialog.querySelector('h1');
+        const trimmedOptionName = optionName.trim(); // Remove whitespace from the option name
+
+        let message = '';
+
+        switch (trimmedOptionName) {
+          case 'Estratégia Conservadora:':
+            message = 'Defina um limite de perdas: Determine um valor máximo para perder em uma sessão e pare de jogar se essa perda for alcançada.\nEstabeleça um objetivo de ganhos: Defina uma meta razoável de lucro e pare de jogar se conseguir alcançá-la.';
+            break;
+          case 'Estratégia do Martingale:':
+            message = 'Dobre sua aposta após cada perda: Aumente a aposta após cada rodada perdida para tentar recuperar as perdas acumuladas.\nReinicie após uma vitória: Quando ganhar, volte à aposta inicial e recomece o processo.';
+            break;
+          case 'Estratégia do Parachute:':
+            message = 'Aposte apenas uma porcentagem do saldo: Arrisque apenas uma pequena porcentagem do seu saldo em cada rodada.\nRetire uma parte dos ganhos: Quando atingir um certo nível de lucro, retire uma parte dele para garantir que você saia com algum ganho.';
+            break;
+          case 'Estratégia do Favorito:':
+            message = 'Observe a tendência do multiplicador: Acompanhe o histórico do jogo e procure padrões nos multiplicadores.\nAumente as apostas em multiplicadores que frequentemente levam a valores mais altos.';
+            break;
+          case 'Estratégia do Risco/Recompensa:':
+            message = 'Aposte em multiplicadores altos: Arrisque pequenas quantias em multiplicadores muito altos para buscar grandes recompensas.\nEsteja ciente de que as chances de perder também são altas nesses casos.';
+            break;
+          case 'Estratégia do Grupo:':
+            message = 'Jogue com amigos: Combine com outros jogadores para jogar como um grupo.\nCompartilhe informações e decisões para tomar ações mais conscientes durante o jogo.';
+            break;
+          case 'Estratégia do Tempo:':
+            message = 'Estabeleça limites de tempo: Determine um período de tempo específico para jogar.\nIndependentemente dos resultados, pare de jogar quando o tempo estabelecido terminar.';
+            break;
+          default:
+            message = 'Undefined option';
+            break;
+        }
+
+        dialogTitle.textContent = message;
+        customDialog.showModal();
+      }
+
+      // Close the dialog when the close button is clicked
+      dialogCloseButton.addEventListener('click', function () {
+        customDialog.close();
+      });
+
+      // Attach the function to each option
+      const optionsList = document.querySelectorAll('#opcoes li a');
+      optionsList.forEach(function (option) {
+        option.addEventListener('click', function (event) {
+          event.preventDefault(); // Prevent the link from navigating to the href
+          const optionName = option.textContent;
+          showDialog(optionName);
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<html>
+<head>
+    <title>hackerbets</title>
+
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      color: white;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    
+    .input-group {
+      margin-bottom: 10px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"] {
+      width: 300px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    select {
+      width: 300px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+    
+    button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none; 
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .generated-times {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .generated-times h3 {
+      margin-bottom: 5px;
+      color: white;
+    }
+    
+    .times-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    
+    .time-item {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+    }
+    
+    .generate-button-container {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    /* Dialog Styles */
+    .dialog-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .dialog-content {
+      text-align: center;
+    }
+
+    .dialog-content h3 {
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .dialog-content p {
+      margin-bottom: 20px;
+    }
+
+    .dialog-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .dialog-button {
+      margin: 0 10px;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* User Info Styles */
+    .user-info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+
+    .user-info-icon {
+      margin-right: 5px;
+      color: white;
+    }
+
+    /* Color Select Styles */
+    .color-select-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+
+    .color-select-label {
+      margin-right: 5px;
+      color: white;
+    }
+
+    .color-select {
+      width: 100px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="user-info">
+    <span class="user-info-icon"> 
+    <span>Usuário autenticado</span>
+  </div>
+
+  <div class="color-select-container">
+    <label for="background-color" class="color-select-label">Selecionar cor de fundo:</label>
+    <select id="background-color" class="color-select">
+      <option value="#00008B">Azul escuro</option>
+      <option value="#000000">Preto</option>
+      <option value="#1C3A48">ROXO ESCURO</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <div class="input-group">
+      <label for="time-interval">Intervalo de tempo:</label>
+      <input type="text" id="time-interval" placeholder="Digite o intervalo de tempo" value="60" pattern="[0-9]*" inputmode="numeric">
+    </div>
+    
+    <div class="input-group">
+      <label for="prediction-count1">Número de predições (Velas de 6.50X):</label>
+      <input type="text" id="prediction-count1" placeholder="Digite o número de predições" value="30" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+    </div>
+    
+    <div class="input-group">
+      <label for="prediction-count2">Número de predições (Velas de 3.50X):</label>
+      <input type="text" id="prediction-count2" placeholder="Digite o número de predições" value="20" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+    </div>
+
+    <div class="input-group">
+      <label for="house">Casa:</label>
+      <select id="house">
+        <option value="">Selecione a sua casa de apostas</option>
+        <option value="888bets">888bets</option>
+        <option value="betika">Betika</option>
+        <option value="betway">Betway</option>
+        <option value="elphantbet">Elphantbet</option>
+        <option value="Hollywoodbet">Hollywoodbet</option>
+        <option value="jogabets">Jogabets</option>
+        <option value="Premierbets">Premierbets</option>
+        <option value="modo lucro">MEGA BET</option>
+      </select>
+    </div>
+    
+    <div class="generate-button-container">
+      <button onclick="generateTimes()">Hackear</button>
+    </div>
+    
+    <div class="generated-times">
+      <style>
+        h3 {
+          text-align: center;
+        }
+      </style>
+    
+      <div id="times-1" class="times-container"></div>
+    </div>
+    
+    <div class="generated-times">
+  
+<style>
+  h3 {
+    text-align: center;
+  }
+</style>
+
+<div id="times-2" class="times-container"></div>
+    </div>
+  </div>
+
+  <div class="dialog-container" id="dialog-container">
+    <div class="dialog-content">
+      <h3Bem-vindo ao nosso bot!</h3>
+      <p>Embora o bot esteja sempre disponível para uso, é sempre importante verificar as condições do mercado. Nosso bot tem uma taxa de acerto de 99.40%, caso o bot seja usado com sabedoria, ele gerará uma receita inflável. No entanto, se for usado por pessoas sem nenhum conhecimento do bot e do próprio jogo, pode levar à falência. Portanto, não culpe o bot pelas perdas, pois não nos responsabilizamos pelas perdas, mas sim pelo funcionamento do bot. Por isso, é importante verificar as condições do mercado antes de tomar decisões.</p>
+      <div class="dialog-buttons">
+        <button class="dialog-button" onclick="closeDialog()">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+
+    var maxPredictions1 = 99;
+    var maxPredictions2 = 99;
+    var generatedTimes1 = [];
+    var generatedTimes2 = [];
+    var currentIndex1 = 0;
+    
+    function generateTimes() {
+      var timeInterval = document.getElementById("time-interval").value;
+      var predictionCount1 = parseInt(document.getElementById("prediction-count1").value);
+      var predictionCount2 = parseInt(document.getElementById("prediction-count2").value);
+      var selectedHouse = document.getElementById("house").value;
+
+      if (timeInterval === "" || isNaN(predictionCount1) || isNaN(predictionCount2)) {
+        alert("Preencha todos os campos corretamente.");
+        return;
+      }
+
+      if (selectedHouse === "") {
+        alert("Selecione uma casa.");
+        return;
+      }
+
+      var times1 = document.getElementById("times-1");
+      var times2 = document.getElementById("times-2");
+      times1.innerHTML = "";
+      times2.innerHTML = "";
+      currentIndex1 = 0;
+
+      generatedTimes1 = generateUniqueTimes(predictionCount1, generatedTimes1, maxPredictions1);
+      generatedTimes2 = generateTimesWithRandomColors(predictionCount2, generatedTimes2, maxPredictions2);
+
+      for (var i = 0; i < generatedTimes1.length; i++) {
+        var time1 = document.createElement("div");
+        time1.innerText = generatedTimes1[i];
+        time1.className = "time-item";
+        time1.style.backgroundColor = "#FF0066"; // Rosa (#FF0066)
+        times1.appendChild(time1);
+      }
+
+      for (var j = 0; j < generatedTimes2.length; j++) {
+        var time2 = document.createElement("div");
+        time2.innerText = generatedTimes2[j].time;
+        time2.className = "time-item";
+        time2.style.backgroundColor = generatedTimes2[j].color;
+        times2.appendChild(time2);
+      }
+    }
+
+    function generateUniqueTimes(count, existingTimes, maxCount) {
+      var currentTime = new Date();
+      var currentHour = currentTime.getHours();
+      var currentMinutes = currentTime.getMinutes();
+      var currentSeconds = currentTime.getSeconds();
+      var randomSeconds;
+      var randomMinutes;
+      var uniqueTimes = existingTimes.slice();
+
+      for (var i = uniqueTimes.length; i < count; i++) {
+        randomSeconds = getRandomNumberExcluding(0, 59, currentSeconds);
+        randomMinutes = getRandomNumberExcluding(currentMinutes + 1, 59, currentMinutes);
+        uniqueTimes.push(formatTime(currentHour) + ":" + formatTime(randomMinutes) + ":" + formatTime(randomSeconds));
+        if (uniqueTimes.length >= maxCount) break;
+      }
+
+      return uniqueTimes.slice(0, maxCount);
+    }
+
+    function generateTimesWithRandomColors(count, existingTimes, maxCount) {
+      var currentTime = new Date();
+      var currentHour = currentTime.getHours();
+      var currentMinutes = currentTime.getMinutes();
+      var currentSeconds = currentTime.getSeconds();
+      var randomSeconds;
+      var randomMinutes;
+      var times = existingTimes.slice();
+
+      for (var i = times.length; i < count; i++) {
+        randomSeconds = getRandomNumber(0, 59);
+        randomMinutes = getRandomNumber(0, 59);
+        times.push({
+          time: formatTime(currentHour) + ":" + formatTime(randomMinutes) + ":" + formatTime(randomSeconds),
+          color: getRandomColor()
+        });
+        if (times.length >= maxCount) break;
+      }
+
+      return times.slice(0, maxCount);
+    }
+
+    function getRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function getRandomNumberExcluding(min, max, excluded) {
+      var randomNum = getRandomNumber(min, max);
+      return (randomNum === excluded) ? getRandomNumberExcluding(min, max, excluded) : randomNum;
+    }
+
+    function formatTime(value) {
+      return value.toString().padStart(2, '0');
+    }
+
+    function getRandomColor() {
+      var colors = ["#007bff", "#FF0066", "#800080"];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function openDialog() {
+      var dialogContainer = document.getElementById("dialog-container");
+      dialogContainer.style.opacity = "1";
+      dialogContainer.style.pointerEvents = "auto";
+    }
+
+    function closeDialog() {
+      var dialogContainer = document.getElementById("dialog-container");
+      dialogContainer.style.opacity = "0";
+      dialogContainer.style.pointerEvents = "none";
+    }
+
+    window.onload = function() {
+      openDialog();
+      var colorSelect = document.getElementById("background-color");
+      colorSelect.addEventListener("change", function() {
+        var selectedColor = colorSelect.value;
+        document.body.style.backgroundColor = selectedColor;
+      });
+
+      showNextTime(); // Chama a função showNextTime após o carregamento da página
+    };
+
+    function showNextTime() {
+      var times1 = document.getElementById("times-1");
+      var times2 = document.getElementById("times-2");
+      var timeItems1 = times1.getElementsByClassName("time-item");
+      var timeItems2 = times2.getElementsByClassName("time-item");
+
+      if (currentIndex1 < timeItems1.length) {
+        timeItems1[currentIndex1].style.display = "block";
+        currentIndex1++;
+      }
+
+      if (currentIndex1 === timeItems1.length) {
+        var button = document.getElementById("show-next-button");
+        button.style.display = "none";
+      }
+    }
+  </script>
+</body>
+  </html>
